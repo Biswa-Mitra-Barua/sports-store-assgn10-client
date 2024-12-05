@@ -1,9 +1,10 @@
 import { useLoaderData } from "react-router-dom";
 import Slider from "../components/Slider/Slider";
+import EquipmentCard from "../components/EquipmentCard/EquipmentCard";
 
 
 const HomeLayout = () => {
-    const services = useLoaderData();
+    const equipments = useLoaderData();
 
     return (
         <div>
@@ -13,9 +14,15 @@ const HomeLayout = () => {
                 </section>
                 {/* PRODUCTION SECTION  */}
                 <section className="mt-20">
-                    <h1 className="text-4xl font-semibold text-center mb-5">Product Section</h1>
+                    <h1 className="text-4xl font-semibold text-center mb-5">Product Section : {equipments.length}</h1>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
-                        
+                        {
+                            equipments.map(equipment => 
+                            <EquipmentCard
+                            key={equipment._id}
+                            equipment={equipment}
+                            ></EquipmentCard>)
+                        }
                     </div>
                 </section>
 

@@ -40,9 +40,9 @@ const AddEquipment = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const { itemName, price, rating, stockStatus } = formData;
+        const { itemName, price, rating, stockStatus, image, categoryName, description, customization, processingTime } = formData;
 
-        if (!itemName || !price || !rating || !stockStatus) {
+        if (!itemName || !price || !rating || !stockStatus || !processingTime || !image || !categoryName || !description || !customization) {
             Swal.fire({
                 icon: "error",
                 title: "Error",
@@ -50,15 +50,28 @@ const AddEquipment = () => {
             });
             return;
         }
-
         console.log("Form Data:", formData);
-        Swal.fire({
-            icon: "success",
-            title: "Great...",
-            text: "Equipment added successfully!",
-        }).then(() => {
-            resetForm();
+
+        fetch('http://localhost:5000/equipment', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body:JSON.stringify(formData)
         })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if(data.insertedId){
+                    Swal.fire({
+                        icon: "success",
+                        title: "Great...",
+                        text: "Equipment Added Successfully!",
+                    }).then(() => {
+                        resetForm();
+                    })
+                }
+            })
     };
 
     return (
@@ -221,7 +234,7 @@ const AddEquipment = () => {
                 </div>
 
                 <div className="form-control mt-4">
-                    <button type="submit" className="btn btn-primary w-full">
+                    <button type="submit" className="btn btn-block">
                         Submit
                     </button>
                 </div>
