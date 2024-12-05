@@ -11,7 +11,7 @@ const NavBar = () => {
         <div className='p-6'>
             <div className='flex justify-between items-center'>
                 <div>
-                    <Link to='/' className='text-3xl font-semibold text-gray-200 '><span className="font-extrabold">Sports</span>Pro</Link>
+                    <Link to='/' className='text-4xl font-bold neon '><span className="font-extrabold">Sports</span>Pro</Link>
                 </div>
                 <div className='hidden md:flex space-x-6'>
                     <NavLink to='/' activeClassName="text-sky-500 font-semibold" className="text-gray-600 hover:text-sky-500 transition-colors">Home</NavLink>
