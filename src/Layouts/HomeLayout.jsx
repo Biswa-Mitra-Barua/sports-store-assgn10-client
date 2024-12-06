@@ -3,6 +3,7 @@ import Slider from "../components/Slider/Slider";
 import EquipmentCard from "../components/EquipmentCard/EquipmentCard";
 import SportsCategories from "../components/SportsCategories/SportsCategories";
 import TopDeals from "../components/TopDeals/TopDeals";
+import SportsTips from "../components/SportsTips/SportsTips";
 
 
 const HomeLayout = () => {
@@ -43,7 +44,7 @@ const HomeLayout = () => {
 
                 {/* Another Section */}
                 <section>
-                    
+                    <SportsTips></SportsTips>
                 </section>
 
             </main>
