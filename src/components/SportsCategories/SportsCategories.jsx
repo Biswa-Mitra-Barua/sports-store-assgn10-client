@@ -14,16 +14,16 @@ const SportsCategories = () => {
   ];
 
   return (
-    <div className="py-10 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50">
+    <div className="py-10 bg-gradient-to-r from-blue-300 via-purple-200 to-pink-50 rounded-sm">
       <h2 className="text-5xl font-bold text-center text-purple-700 mb-10">
         Sports Categories
       </h2>
       <Marquee pauseOnHover gradient={false} speed={50}>
-        <div className="flex gap-6">
+        <div className="flex">
           {sports.map((sport, index) => (
             <div
               key={index}
-              className="card w-48 h-48 bg-white shadow-xl hover:shadow-2xl hover:scale-105 transition-transform duration-300 border-2 border-orange-100"
+              className="card w-48 h-48 bg-white shadow-xl hover:shadow-2xl hover:scale-105 transition-transform duration-300 border-2 border-orange-100 mx-3"
             >
               <figure className="px-4 pt-5">
                 <img
