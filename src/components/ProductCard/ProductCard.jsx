@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const ProductCard = ({ equipment }) => {
+const ProductCard = ({ equipment, equipments, setEquipments }) => {
     const { itemName, image, description, price, _id } = equipment;
 
     const handleDelete = (_id) => {
-        console.log(_id)
+        
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -30,6 +30,8 @@ const ProductCard = ({ equipment }) => {
                                 text: "Your equipment has been deleted.",
                                 icon: "success"
                             });
+                            const remaining = equipments.filter(eqp => eqp._id !== _id)
+                            setEquipments(remaining)
                         }
                     })
             }
@@ -43,7 +45,7 @@ const ProductCard = ({ equipment }) => {
                 <img
                     src={image}
                     alt="Product"
-                    className=" w-full h-full rounded-xl" />
+                    className=" w-full h-[300px] rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title font-bold">{itemName}</h2>

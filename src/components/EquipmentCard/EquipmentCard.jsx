@@ -9,7 +9,7 @@ const EquipmentCard = ({equipment}) => {
                 <img
                     src={image}
                     alt="Product"
-                    className=" w-full h-full rounded-xl" />
+                    className=" w-full h-[300px] rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title font-bold">{itemName}</h2>

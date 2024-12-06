@@ -9,17 +9,6 @@ const UpdateEquipment = () => {
     const { _id, itemName, price, rating, stockStatus, image, categoryName, description, customization, processingTime } = equipment;
 
     const {user} = useContext(authContext);
-    // const [formData, setFormData] = useState({
-    //     image: '',
-    //     itemName: '',
-    //     categoryName: '',
-    //     description: '',
-    //     price: '',
-    //     rating: '',
-    //     customization: '',
-    //     processingTime: '',
-    //     stockStatus: '',
-    // });
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -32,7 +21,7 @@ const UpdateEquipment = () => {
 
     const handleUpdate = (e) => {
         e.preventDefault();
-        // const { itemName, price, rating, stockStatus, image, categoryName, description, customization, processingTime } = formData;
+
         const form = e.target;
         const itemName = form.itemName.value;
         const price = form.price.value;
@@ -47,15 +36,6 @@ const UpdateEquipment = () => {
         const updatedEquipment = {itemName, price, rating, stockStatus, processingTime, image, description, customization, categoryName};
 
         console.log(updatedEquipment);
-
-        // if (!itemName || !price || !rating || !stockStatus || !processingTime || !image || !categoryName || !description || !customization) {
-        //     Swal.fire({
-        //         icon: "error",
-        //         title: "Error",
-        //         text: "Please fill in all the required fields!",
-        //     });
-        //     return;
-        // }
 
         fetch(`http://localhost:5000/equipment/${_id}`, {
             method: 'PUT',

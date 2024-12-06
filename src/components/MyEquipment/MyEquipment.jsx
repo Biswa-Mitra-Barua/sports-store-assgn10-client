@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import ProductCard from '../ProductCard/ProductCard';
 
 const MyEquipment = () => {
-    const equipments = useLoaderData();
+    const loadedEquipments = useLoaderData();
+    const [equipments, setEquipments] = useState(loadedEquipments)
 
     return (
         <div className='my-10'>
@@ -13,6 +14,8 @@ const MyEquipment = () => {
                     equipments.map(equipment => <ProductCard
                         key={equipment._id}
                         equipment={equipment}
+                        equipments={equipments}
+                        setEquipments={setEquipments}
                     >    
                     </ProductCard>
                 )}
