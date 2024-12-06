@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Slider from "../components/Slider/Slider";
 import EquipmentCard from "../components/EquipmentCard/EquipmentCard";
+import SportsCategories from "../components/SportsCategories/SportsCategories";
 
 
 const HomeLayout = () => {
@@ -14,7 +15,7 @@ const HomeLayout = () => {
                 </section>
                 {/* PRODUCTION SECTION  */}
                 <section className="mt-20">
-                    <h1 className="text-4xl font-semibold text-center mb-5">Product Section : {equipments.length}</h1>
+                    <h1 className="text-3xl md:text-5xl font-bold text-center mb-5">Our Products</h1>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
                         {
                             equipments.map(equipment => 
@@ -27,8 +28,8 @@ const HomeLayout = () => {
                 </section>
 
                 {/* SPORTS CATEGORIES  */}
-                <section className="mt-20">
-                    <h2 className="text-4xl font-semibold text-center mb-5">Sports Categories Section</h2>
+                <section className="my-20">
+                    <SportsCategories></SportsCategories>
                 </section>
 
                 {/* Another Section */}

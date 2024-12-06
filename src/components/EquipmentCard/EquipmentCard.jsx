@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const EquipmentCard = ({equipment}) => {
-    const {itemName, image, description, price} = equipment;
+const EquipmentCard = ({ equipment }) => {
+    const { _id, itemName, image, description, price } = equipment;
 
     return (
         <div className="card bg-base-100 w-96 shadow-xl">
@@ -16,7 +17,9 @@ const EquipmentCard = ({equipment}) => {
                 <p className='my-1'>{description}</p>
                 <p>Price: ${price}</p>
                 <div className="card-actions mt-3">
-                    <button className="btn btn-primary">View Details</button>
+                    <Link to={`/viewDetails/${equipment._id}`} className="btn btn-primary">
+                        View Details
+                    </Link>
                 </div>
             </div>
         </div>
