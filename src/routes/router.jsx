@@ -10,6 +10,7 @@ import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 import MyEquipment from "../components/MyEquipment/MyEquipment";
 import AddEquipment from "../components/AddEquipment/AddEquipment";
 import UpdateEquipment from "../components/UpdateEquipment/UpdateEquipment";
+import ViewDetails from "../components/ViewDetails/ViewDetails";
 
 
 
@@ -45,6 +46,13 @@ const router = createBrowserRouter([
                 path: '/updateEquipment/:id',
                 element: <PrivateRoute>
                     <UpdateEquipment></UpdateEquipment>,
+                </PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/equipment/${params.id}`)
+            },
+            {
+                path: '/viewDetails/:id',
+                element: <PrivateRoute>
+                    <ViewDetails></ViewDetails>,
                 </PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/equipment/${params.id}`)
             },

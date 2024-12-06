@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
-// import EquipmentCard from '../EquipmentCard/EquipmentCard';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const AllEquipment = () => {
     const loadedEquipments = useLoaderData();
     const [equipments, setEquipments] = useState(loadedEquipments)
-    // const { _id, itemName, price, categoryName } = equipments;
 
     return (
         <div className='my-20'>
@@ -24,30 +22,23 @@ const AllEquipment = () => {
                     <tbody>
                         {/* row 1 */}
                         {
-                            equipments.map(equipment => <tr>
-                                <th>1</th>
-                                <td>{equipment.itemName}</td>
-                                <td>{equipment.categoryName}</td>
-                                <td>{equipment.price}</td>
-                                <td><button className='btn btn-success'>View Details</button></td>
-                            </tr>)
+                            equipments.map((equipment, index) =>
+                                <tr key={equipment._id}>
+                                    <th>{index + 1}</th>
+                                    <td>{equipment.itemName}</td>
+                                    <td>{equipment.categoryName}</td>
+                                    <td>{equipment.price}</td>
+                                    <td>
+                                        <Link to={`/viewDetails/${equipment._id}`} className="btn btn-success">
+                                            View Details
+                                        </Link>
+                                    </td>
+                                </tr>)
                         }
-                          
+
                     </tbody>
                 </table>
             </div>
-            {/* <section className="mt-20">
-                <h1 className="text-4xl font-semibold text-center mb-5">Product Section : {equipments.length}</h1>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
-                    {
-                        equipments.map(equipment =>
-                            <EquipmentCard
-                                key={equipment._id}
-                                equipment={equipment}
-                            ></EquipmentCard>)
-                    }
-                </div>
-            </section> */}
         </div>
     );
 };
