@@ -1,21 +1,16 @@
 import { Link } from "react-router-dom";
-import { AiOutlineHome } from 'react-icons/ai';
+import './Error.css';
 
 const Error = () => {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-50 to-indigo-100 text-center">
-            <h1 className="text-8xl font-bold text-blue-500">404</h1>
-            <p className="text-2xl text-gray-700 mt-4">
-                Oops! The page you're looking for doesn't exist.
-            </p>
-            <p className="text-lg text-gray-500 mt-2">
-                It might have been moved, or the link is broken.
-            </p>
-
-            <div className="mt-8">
-                <Link to="/" className="btn btn-primary gap-2">
-                    <AiOutlineHome className="text-lg" />
-                    Back to Home
+        <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-800 to-pink-200 text-white">
+            <div className="text-center">
+                <h1 className="text-9xl font-bold animate-bounce text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 to-red-400">
+                    404
+                </h1>
+                <p className="text-xl mt-4">Oops! Page not found.</p>
+                <Link to='/' className="mt-6 inline-block px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-cyan-200 transition duration-300">
+                    Go Back Home
                 </Link>
             </div>
         </div>
