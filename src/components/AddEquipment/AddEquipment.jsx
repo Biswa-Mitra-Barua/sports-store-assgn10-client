@@ -51,7 +51,7 @@ const AddEquipment = () => {
             return;
         }
 
-        fetch('http://localhost:5000/equipment', {
+        fetch('https://sports-store-server-ruddy.vercel.app/equipment', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

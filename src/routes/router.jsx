@@ -22,12 +22,12 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <HomeLayout></HomeLayout>,
-                loader: () => fetch('http://localhost:5000/equipment')
+                loader: () => fetch('https://sports-store-server-ruddy.vercel.app/equipment')
             },
             {
                 path: '/allEquipment',
-                element:<AllEquipment></AllEquipment>,
-                loader: () => fetch('http://localhost:5000/allEquipment')
+                element: <AllEquipment></AllEquipment>,
+                loader: () => fetch('https://sports-store-server-ruddy.vercel.app/allEquipment')
             },
             {
                 path: '/addEquipment',
@@ -46,25 +46,25 @@ const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <UpdateEquipment></UpdateEquipment>,
                 </PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/equipment/${params.id}`)
+                loader: ({ params }) => fetch(`https://sports-store-server-ruddy.vercel.app/equipment/${params.id}`)
             },
             {
                 path: '/viewDetails/:id',
                 element: <PrivateRoute>
                     <ViewDetails></ViewDetails>,
                 </PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/equipment/${params.id}`)
+                loader: ({ params }) => fetch(`https://sports-store-server-ruddy.vercel.app/equipment/${params.id}`)
             },
             {
-                path:'/login',
-                element:<Login></Login>
+                path: '/login',
+                element: <Login></Login>
             },
             {
-                path:'/register',
-                element:<Register></Register>
+                path: '/register',
+                element: <Register></Register>
             },
             {
-                path:'/forgotPassword',
+                path: '/forgotPassword',
                 element: <ForgotPassword></ForgotPassword>
             },
             {

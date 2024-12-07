@@ -18,7 +18,7 @@ const ProductCard = ({ equipment, equipments, setEquipments }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/equipment/${_id}`, {
+                fetch(`https://sports-store-server-ruddy.vercel.app/equipment/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

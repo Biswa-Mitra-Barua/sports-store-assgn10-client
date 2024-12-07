@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import ProductCard from '../ProductCard/ProductCard';
 import { authContext } from '../../AuthProvider/AuthProvider';
+import { Bounce } from 'react-awesome-reveal';
 
 const MyEquipment = () => {
     const loadedEquipments = useLoaderData();
@@ -19,7 +20,7 @@ const MyEquipment = () => {
             }
 
             try {
-                const response = await fetch(`http://localhost:5000/myEquipment?email=${encodeURIComponent(user.email)}`);
+                const response = await fetch(`https://sports-store-server-ruddy.vercel.app/myEquipment?email=${encodeURIComponent(user.email)}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch equipment');
                 }
@@ -47,7 +48,9 @@ const MyEquipment = () => {
 
     return (
         <div className='my-10'>
-            <h1 className="text-4xl font-semibold text-center mb-5">My Equipment List</h1>
+            <Bounce>
+                <h1 className="text-4xl font-semibold text-center mb-5">My Equipment List</h1>
+            </Bounce>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
                 {
                     equipments.map(equipment => <ProductCard

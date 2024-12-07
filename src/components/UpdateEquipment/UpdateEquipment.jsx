@@ -36,7 +36,7 @@ const UpdateEquipment = () => {
         const updatedEquipment = {itemName, price, rating, stockStatus, processingTime, image, description, customization, categoryName};
 
 
-        fetch(`http://localhost:5000/equipment/${_id}`, {
+        fetch(`https://sports-store-server-ruddy.vercel.app/equipment/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
