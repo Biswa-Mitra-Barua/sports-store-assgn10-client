@@ -5,7 +5,7 @@ const Footer = () => {
             <footer className="container mx-auto px-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8">
                     <div>
-                        <h3 className="text-xl font-semibold mb-4">SportsPro</h3>
+                        <h3 className="text-xl font-semibold mb-4 neon">SportsPro</h3>
                         <ul>
                             <li>
                                 <a href="#" className="hover:text-teal-400 transition-all duration-300">About Us</a>

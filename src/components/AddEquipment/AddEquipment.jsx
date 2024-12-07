@@ -50,18 +50,20 @@ const AddEquipment = () => {
             });
             return;
         }
-        console.log("Form Data:", formData);
 
         fetch('http://localhost:5000/equipment', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body:JSON.stringify(formData)
+            body:JSON.stringify({
+                ...formData,
+                userId: user?.UID,
+                Identifier: user?.email,
+            }),
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 if(data.insertedId){
                     Swal.fire({
                         icon: "success",

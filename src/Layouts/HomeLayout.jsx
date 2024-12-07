@@ -18,6 +18,7 @@ const HomeLayout = () => {
                 {/* PRODUCTION SECTION  */}
                 <section className="mt-20">
                     <h1 className="text-3xl md:text-5xl font-bold text-center mb-5">Our Products</h1>
+                    <p className="text-center mt-2 mb-4 w-4/5 mx-auto">Elevate your game with our premium sports equipment, designed for athletes of all levels. From outdoor adventures to professional training, we offer durable, high-performance gear to help you achieve your goals.</p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
                         {
                             equipments.map(equipment =>
@@ -35,7 +36,7 @@ const HomeLayout = () => {
                 </section>
 
                 <section className="my-10">
-                    <h1 className="text-4xl text-gray-400 font-bold text-center">FIND OUT MORE ...</h1>
+                    <h1 className="text-3xl text-gray-400 font-bold text-center">FIND OUT MORE ...</h1>
                 </section>
 
                 <section>
