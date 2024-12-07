@@ -3,24 +3,43 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const AllEquipment = () => {
     const loadedEquipments = useLoaderData();
-    const [equipments, setEquipments] = useState(loadedEquipments)
+    const [equipments, setEquipments] = useState(loadedEquipments);
+    const [isAscending, setIsAscending] = useState(true);
+
+    const handleSortByPrice = () => {
+        const sortedEquipments = [...equipments].sort((a, b) => {
+            if (isAscending) {
+                return a.price - b.price;
+            } else {
+                return b.price - a.price;
+            }
+        });
+
+        setEquipments(sortedEquipments);
+        setIsAscending(!isAscending);
+    };
 
     return (
-        <div className='my-20'>
+        <div className='my-16'>
+            <div className="flex justify-end mb-10 mx-28">
+                <button onClick={handleSortByPrice} className="btn btn-info">
+                    Sort by Price ({isAscending ? 'Ascending' : 'Descending'})
+                </button>
+            </div>
             <div className="overflow-x-auto">
                 <table className="table">
-                    {/* head */}
+                    
                     <thead className='font-bold text-cyan-300 text-sm'>
                         <tr>
                             <th>Sl No.</th>
                             <th>Name</th>
                             <th>Category</th>
                             <th>Price</th>
-                            <th>Full View</th>
+                            <th>View Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {/* row 1 */}
+                        
                         {
                             equipments.map((equipment, index) =>
                                 <tr key={equipment._id}>

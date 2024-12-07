@@ -35,7 +35,6 @@ const UpdateEquipment = () => {
 
         const updatedEquipment = {itemName, price, rating, stockStatus, processingTime, image, description, customization, categoryName};
 
-        console.log(updatedEquipment);
 
         fetch(`http://localhost:5000/equipment/${_id}`, {
             method: 'PUT',
