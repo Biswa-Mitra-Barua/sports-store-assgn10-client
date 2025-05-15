@@ -1,4 +1,6 @@
 # SportsPro: Online Sports Equipment Sale
+Project Overview: 
+In this project, user could be able to see various types of sports projects for instance - indoor and outdoor tools, equipments and things. The user could register and login, then see the product details which they want and add to their favorite equipment list for further inspection or update.
 
 - Live Link: [https://sports-pro-c7097.web.app/]
 
