@@ -9,7 +9,7 @@ const NavBar = () => {
     const { user, handleLogout } = useContext(authContext);
     
     return (
-        <div className='p-6'>
+        <div className='p-6 sticky top-0 z-50 shadow-md dark:shadow-slate-800'>
             <div className='flex justify-between items-center'>
                 <div>
                     <Link to='/' className='text-5xl font-bold neon'><span className="font-extrabold">Sports</span>Pro</Link>
