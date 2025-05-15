@@ -33,7 +33,7 @@ const TopDeals = () => {
   ];
 
   return (
-    <div className="py-10 bg-gradient-to-br from-purple-800 to-stone-100 rounded-lg">
+    <div className="py-10 bg-gradient-to-br from-gray-800 to-gray-200 rounded-lg">
       <h2 className="text-4xl font-bold text-center text-white mb-10">
         Top Deals & Discounts
       </h2>

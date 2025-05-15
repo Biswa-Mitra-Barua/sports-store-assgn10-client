@@ -14,8 +14,8 @@ const SportsCategories = () => {
   ];
 
   return (
-    <div className="py-10 bg-gradient-to-r from-blue-300 via-purple-200 to-pink-50 rounded-sm">
-      <h2 className="text-5xl font-bold text-center text-purple-700 mb-10">
+    <div className="py-10 bg-gradient-to-r from-gray-800 to-gray-200 rounded-sm">
+      <h2 className="text-4xl font-bold text-center text-white mb-10">
         Sports Categories
       </h2>
       <Marquee pauseOnHover gradient={false} speed={50}>
