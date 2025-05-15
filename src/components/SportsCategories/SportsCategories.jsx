@@ -14,7 +14,7 @@ const SportsCategories = () => {
   ];
 
   return (
-    <div className="py-10 bg-gradient-to-r from-gray-800 to-gray-200 rounded-sm">
+    <div className="py-10 bg-gradient-to-r from-gray-800 to-gray-200 rounded-md">
       <h2 className="text-4xl font-bold text-center text-white mb-10">
         Sports Categories
       </h2>

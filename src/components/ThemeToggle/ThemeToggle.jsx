@@ -13,11 +13,11 @@ const ThemeToggle = () => {
     }
 
     return (
-        <div className='flex justify-end mx-20'>
+        <div className='flex justify-end mx-5'>
             <button
                 onClick={toggleTheme}
                 className="btn btn-outline btn-xs">
-                {theme === 'light' ? 'Switch to Dark' : 'Switch to Light'}
+                {theme === 'light' ? 'Dark Switch' : 'Light Switch'}
             </button>
         </div>
     );

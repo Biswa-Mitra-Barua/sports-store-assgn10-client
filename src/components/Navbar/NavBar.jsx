@@ -2,6 +2,7 @@ import { Link, NavLink } from 'react-router-dom';
 import '../Navbar/Navbar.css';
 import { useContext } from 'react';
 import { authContext } from '../../AuthProvider/AuthProvider';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 
 const NavBar = () => {
@@ -11,7 +12,7 @@ const NavBar = () => {
         <div className='p-6'>
             <div className='flex justify-between items-center'>
                 <div>
-                    <Link to='/' className='text-5xl font-bold neon '><span className="font-extrabold">Sports</span>Pro</Link>
+                    <Link to='/' className='text-5xl font-bold neon'><span className="font-extrabold">Sports</span>Pro</Link>
                 </div>
                 <div className='hidden md:flex space-x-6'>
                     <NavLink to='/' activeClassName="text-sky-700 font-bold" className=" hover:text-sky-700 transition-colors">Home</NavLink>
@@ -21,6 +22,7 @@ const NavBar = () => {
                 </div>
 
                 <div className='flex items-center gap-4'>
+                    <ThemeToggle></ThemeToggle>
                     <div>
                         {user?.photoURL &&
                             (<img className='w-12 h-12 rounded-full border-2 border-sky-700 hover:shadow-lg cursor-pointer'

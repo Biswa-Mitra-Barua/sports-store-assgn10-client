@@ -18,7 +18,7 @@ const Slider = () => {
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
             loop={true}
-            className=' shadow-xl rounded-lg'
+            className=' shadow-xl rounded-lg py-10'
         >
             <SwiperSlide>
                 <img src="/BannerImages/black-friday.jpg" alt="" style={{ width: "100%", height: "80vh" }} />
