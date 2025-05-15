@@ -17,7 +17,7 @@ const EquipmentCard = ({ equipment }) => {
                 <p className='my-1'>{description}</p>
                 <p>Price: ${price}</p>
                 <div className="card-actions mt-3">
-                    <Link to={`/viewDetails/${equipment._id}`} className="btn btn-primary">
+                    <Link to={`/viewDetails/${equipment._id}`} className="btn btn-outline font-bold">
                         View Details
                     </Link>
                 </div>

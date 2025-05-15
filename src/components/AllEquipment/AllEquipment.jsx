@@ -29,7 +29,7 @@ const AllEquipment = () => {
             <div className="overflow-x-auto">
                 <table className="table">
                     
-                    <thead className='font-bold text-gray-700 text-base'>
+                    <thead className='font-bold text-gray-400 text-base'>
                         <tr>
                             <th>Sl No.</th>
                             <th>Name</th>

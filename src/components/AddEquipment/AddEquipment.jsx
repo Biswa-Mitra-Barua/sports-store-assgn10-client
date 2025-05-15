@@ -79,12 +79,12 @@ const AddEquipment = () => {
     return (
         <div className='my-20'>
             <form onSubmit={handleSubmit}
-                className="max-w-lg mx-auto bg-white shadow-md rounded-lg p-6 space-y-4">
-                <h2 className="text-2xl font-bold text-center">Add Equipment</h2>
+                className="max-w-lg mx-auto border-slate-300 border-2 shadow-md rounded-lg px-8 py-10 space-y-4">
+                <h2 className="text-3xl font-bold text-center">Add Equipment</h2>
 
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Image URL</span>
+                        <span className="label-text font-semibold">Image URL</span>
                     </label>
                     <input
                         type="text"
@@ -98,7 +98,7 @@ const AddEquipment = () => {
 
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Item Name</span>
+                        <span className="label-text font-semibold">Item Name</span>
                     </label>
                     <input
                         type="text"
@@ -112,7 +112,7 @@ const AddEquipment = () => {
 
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Category Name</span>
+                        <span className="label-text font-semibold">Category Name</span>
                     </label>
                     <input
                         type="text"
@@ -126,7 +126,7 @@ const AddEquipment = () => {
 
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Description</span>
+                        <span className="label-text font-semibold">Description</span>
                     </label>
                     <textarea
                         name="description"
@@ -139,7 +139,7 @@ const AddEquipment = () => {
 
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Price</span>
+                        <span className="label-text font-semibold">Price</span>
                     </label>
                     <input
                         type="number"
@@ -153,7 +153,7 @@ const AddEquipment = () => {
 
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Rating</span>
+                        <span className="label-text font-semibold">Rating</span>
                     </label>
                     <input
                         type="number"
@@ -169,7 +169,7 @@ const AddEquipment = () => {
 
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Customization</span>
+                        <span className="label-text font-semibold">Customization</span>
                     </label>
                     <input
                         type="text"
@@ -183,7 +183,7 @@ const AddEquipment = () => {
 
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Processing Time</span>
+                        <span className="label-text font-semibold">Processing Time</span>
                     </label>
                     <input
                         type="text"
@@ -197,7 +197,7 @@ const AddEquipment = () => {
 
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Stock Status</span>
+                        <span className="label-text font-semibold">Stock Status</span>
                     </label>
                     <input
                         type="number"
@@ -211,32 +211,32 @@ const AddEquipment = () => {
 
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">User Email</span>
+                        <span className="label-text font-semibold">User Email</span>
                     </label>
                     <input
                         type="email"
                         name="userEmail"
                         value={user?.email || 'No email available'}
                         readOnly
-                        className="input input-bordered w-full bg-gray-100"
+                        className="input input-bordered w-full"
                     />
                 </div>
 
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">User Name</span>
+                        <span className="label-text font-semibold">User Name</span>
                     </label>
                     <input
                         type="text"
                         name="userName"
                         value={user?.name || 'No user available'}
                         readOnly
-                        className="input input-bordered w-full bg-gray-100"
+                        className="input input-bordered w-full"
                     />
                 </div>
 
-                <div className="form-control mt-4">
-                    <button type="submit" className="btn btn-block">
+                <div className="form-control pt-6">
+                    <button type="submit" className="btn btn-outline font-bold">
                         Submit
                     </button>
                 </div>

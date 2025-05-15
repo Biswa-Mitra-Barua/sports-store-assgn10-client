@@ -216,7 +216,7 @@ const UpdateEquipment = () => {
                 </div>
 
                 <div className="form-control mt-4">
-                    <button type="submit" className="btn btn-block">
+                    <button type="submit" className="btn btn-outline">
                         Update
                     </button>
                 </div>

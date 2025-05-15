@@ -53,11 +53,11 @@ const ProductCard = ({ equipment, equipments, setEquipments }) => {
                 <p>Price: ${price}</p>
                 <div className="card-actions mt-3 space-x-3">
                     <Link to = {`/updateEquipment/${_id}`}>
-                        <button className="btn btn-primary">Update</button>
+                        <button className="btn btn-outline">Update</button>
                     </Link>
                     <button
                         onClick={() => handleDelete(_id)}
-                        className="btn btn-primary">Delete</button>
+                        className="btn btn-outline">Delete</button>
                 </div>
             </div>
         </div>

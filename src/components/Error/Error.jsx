@@ -9,7 +9,7 @@ const Error = () => {
             <div className="text-center w-1/2">
                 <Lottie loop={true} animationData={Animate}/>
                 <p className="text-xl mt-4">Oops! Page not found.</p>
-                <Link to='/' className="mt-6 inline-block px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-cyan-200 transition duration-300">
+                <Link to='/' className="mt-6 inline-block px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-slate-500 transition duration-300">
                     Go Back Home
                 </Link>
             </div>

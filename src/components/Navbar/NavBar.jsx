@@ -14,16 +14,16 @@ const NavBar = () => {
                     <Link to='/' className='text-5xl font-bold neon '><span className="font-extrabold">Sports</span>Pro</Link>
                 </div>
                 <div className='hidden md:flex space-x-6'>
-                    <NavLink to='/' activeClassName="text-sky-500 font-semibold" className="text-gray-700 hover:text-sky-500 transition-colors">Home</NavLink>
-                    <NavLink to='/allEquipment' activeClassName="text-sky-500 font-semibold" className="text-gray-700 hover:text-sky-500 transition-colors">All Sports Equipment</NavLink>
-                    <NavLink to='/addEquipment' activeClassName="text-sky-500 font-semibold" className="text-gray-700 hover:text-sky-500 transition-colors">Add Equipment</NavLink>
-                    <NavLink to='/myEquipment' activeClassName="text-sky-500 font-semibold" className="text-gray-700 hover:text-sky-500 transition-colors">My Equipment List</NavLink>
+                    <NavLink to='/' activeClassName="text-sky-700 font-bold" className=" hover:text-sky-700 transition-colors">Home</NavLink>
+                    <NavLink to='/allEquipment' activeClassName="text-sky-700 font-bold" className="hover:text-sky-700 transition-colors">All Sports Equipment</NavLink>
+                    <NavLink to='/addEquipment' activeClassName="text-sky-700 font-bold" className="hover:text-sky-700 transition-colors">Add Equipment</NavLink>
+                    <NavLink to='/myEquipment' activeClassName="text-sky-700 font-bold" className="hover:text-sky-700 transition-colors">My Equipment List</NavLink>
                 </div>
 
                 <div className='flex items-center gap-4'>
                     <div>
                         {user?.photoURL &&
-                            (<img className='w-12 h-12 rounded-full border-2 border-sky-500 hover:shadow-lg cursor-pointer'
+                            (<img className='w-12 h-12 rounded-full border-2 border-sky-700 hover:shadow-lg cursor-pointer'
                                 src={user.photoURL}
                                 title={user?.displayName || 'User'}>
                             </img>)}
