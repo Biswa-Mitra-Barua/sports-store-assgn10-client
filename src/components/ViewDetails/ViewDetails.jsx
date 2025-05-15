@@ -1,4 +1,3 @@
-import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const ViewDetails = () => {
@@ -6,11 +5,11 @@ const ViewDetails = () => {
 
     return (
         <div className='my-10'>
-            <div className="py-12 bg-blue-700 bg-opacity-5">
-                <h1 className="text-center shadow-highlight text-4xl sm:text-5xl font-extrabold text-gray-300 drop-shadow-lg">
+            <div className="py-12">
+                <h1 className="text-center shadow-highlight text-4xl sm:text-5xl font-extrabold">
                     Explore the Details of {equipment.itemName}
                 </h1>
-                <p className="text-center text-lg text-gray-300 mt-3">
+                <p className="text-center text-lg mt-3">
                     Dive deep into the specifics and features of this equipment.
                 </p>
             </div>

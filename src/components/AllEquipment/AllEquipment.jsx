@@ -22,14 +22,14 @@ const AllEquipment = () => {
     return (
         <div className='my-16'>
             <div className="flex justify-end mb-10 mx-28">
-                <button onClick={handleSortByPrice} className="btn btn-info">
+                <button onClick={handleSortByPrice} className="btn btn-outline">
                     Sort by Price ({isAscending ? 'Ascending' : 'Descending'})
                 </button>
             </div>
             <div className="overflow-x-auto">
                 <table className="table">
                     
-                    <thead className='font-bold text-cyan-300 text-sm'>
+                    <thead className='font-bold text-gray-700 text-base'>
                         <tr>
                             <th>Sl No.</th>
                             <th>Name</th>
@@ -48,7 +48,7 @@ const AllEquipment = () => {
                                     <td>{equipment.categoryName}</td>
                                     <td>{equipment.price}</td>
                                     <td>
-                                        <Link to={`/viewDetails/${equipment._id}`} className="btn btn-success">
+                                        <Link to={`/viewDetails/${equipment._id}`} className="btn btn-outline">
                                             View Details
                                         </Link>
                                     </td>
