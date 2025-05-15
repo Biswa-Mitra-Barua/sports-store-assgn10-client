@@ -4,12 +4,12 @@ const EquipmentCard = ({ equipment }) => {
     const { _id, itemName, image, description, price } = equipment;
 
     return (
-        <div className="card bg-base-100 w-96 shadow-xl">
-            <figure className="px-10 pt-10">
+        <div className="card bg-base-100 w-full border-2 shadow-xl">
+            <figure className="px-10 md:px-6 pt-10 md:pt-8">
                 <img
                     src={image}
                     alt="Product"
-                    className=" w-full h-[300px] rounded-xl" />
+                    className=" w-full h-[300px] md:h-[220px] rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title font-bold">{itemName}</h2>
