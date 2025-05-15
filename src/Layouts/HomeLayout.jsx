@@ -5,6 +5,7 @@ import SportsCategories from "../components/SportsCategories/SportsCategories";
 import TopDeals from "../components/TopDeals/TopDeals";
 import SportsTips from "../components/SportsTips/SportsTips";
 import { Bounce, Fade } from "react-awesome-reveal";
+import FAQ from "../components/FAQ/FAQ";
 
 const HomeLayout = () => {
     const equipments = useLoaderData();
@@ -50,6 +51,9 @@ const HomeLayout = () => {
                 {/* Another Section */}
                 <section>
                     <SportsTips></SportsTips>
+                </section>
+                <section>
+                    <FAQ></FAQ>
                 </section>
 
             </main>
