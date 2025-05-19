@@ -16,9 +16,9 @@ const ViewDetails = () => {
 
             <div className="flex justify-center items-center min-h-screen bg-gray-900 px-4 sm:px-6 lg:px-8">
 
-                <div className="relative group flex flex-col md:flex-row max-w-4xl items-center gap-6 p-6 bg-white rounded-xl shadow-xl transform transition-transform duration-500 hover:scale-105">
+                <div className="relative group flex flex-col md:flex-row max-w-4xl items-center gap-6 p-6 bg-gray-200 rounded-xl shadow-xl transform transition-transform duration-500 hover:scale-100">
 
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-700 via-purple-500 to-pink-300 rounded-xl blur-lg opacity-70 animate-glaze"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r rounded-xl blur-lg opacity-70 animate-glaze p-4"></div>
 
                     <div className="relative w-full md:w-1/2">
                         <img
