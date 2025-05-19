@@ -40,7 +40,7 @@ const HomeLayout = () => {
 
                 <section className="my-10">
                     <Fade>
-                        <h1 className="text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-purple-300 to-indigo-500">FIND OUT MORE ...</h1>
+                        <h1 className="text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-black to-indigo-900">FIND OUT MORE ...</h1>
                     </Fade>
                 </section>
 

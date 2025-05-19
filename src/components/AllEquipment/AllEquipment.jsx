@@ -16,7 +16,7 @@ const AllEquipment = () => {
     };
 
     return (
-        <div className='my-10 px-4 md:px-8'>
+        <div className='my-10 px-4'>
             <div className="flex justify-end mb-6">
                 <button
                     onClick={handleSortByPrice}
@@ -40,7 +40,7 @@ const AllEquipment = () => {
 
                     <tbody>
                         {equipments.map((equipment, index) => (
-                            <tr key={equipment._id} className="hover:bg-gray-600">
+                            <tr key={equipment._id} className="">
                                 <td className="px-3 py-2">{index + 1}</td>
                                 <td className="px-3 py-2">{equipment.itemName}</td>
                                 <td className="px-3 py-2">{equipment.categoryName}</td>
